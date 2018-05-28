@@ -18,6 +18,9 @@
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
     <PackageCertificateKeyFile>Ravelo_CIS479_Project_2_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -95,6 +98,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AStar.cs" />
+    <Compile Include="BranchAndBound.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -107,14 +112,32 @@
     <None Include="Ravelo_CIS479_Project_2_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\AppIco.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\AppIco.altform-unplated_targetsize-24.png" />
+    <Content Include="Assets\AppIco.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\AppIco.altform-unplated_targetsize-32.png" />
+    <Content Include="Assets\AppIco.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\AppIco.scale-100.png" />
+    <Content Include="Assets\AppIco.scale-125.png" />
+    <Content Include="Assets\AppIco.scale-150.png" />
+    <Content Include="Assets\AppIco.scale-200.png" />
+    <Content Include="Assets\AppIco.scale-400.png" />
+    <Content Include="Assets\AppIco.targetsize-16.png" />
+    <Content Include="Assets\AppIco.targetsize-24.png" />
+    <Content Include="Assets\AppIco.targetsize-256.png" />
+    <Content Include="Assets\AppIco.targetsize-32.png" />
+    <Content Include="Assets\AppIco.targetsize-48.png" />
+    <Content Include="Assets\MedTile.scale-100.png" />
+    <Content Include="Assets\MedTile.scale-125.png" />
+    <Content Include="Assets\MedTile.scale-150.png" />
+    <Content Include="Assets\MedTile.scale-200.png" />
+    <Content Include="Assets\MedTile.scale-400.png" />
+    <Content Include="Assets\PackLogo.scale-100.png" />
+    <Content Include="Assets\PackLogo.scale-125.png" />
+    <Content Include="Assets\PackLogo.scale-150.png" />
+    <Content Include="Assets\PackLogo.scale-200.png" />
+    <Content Include="Assets\PackLogo.scale-400.png" />
     <Content Include="Properties\Default.rd.xml" />
-    <Content Include="Assets\LockScreenLogo.scale-200.png" />
-    <Content Include="Assets\SplashScreen.scale-200.png" />
-    <Content Include="Assets\Square150x150Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
-    <Content Include="Assets\StoreLogo.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -131,6 +154,7 @@
       <Version>6.0.6</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
